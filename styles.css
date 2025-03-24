@@ -1,0 +1,55 @@
+/*css style sheet for html page*/
+
+/*general reset/styling*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*communal styling for these sections*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.header-nav {
+  text-align: center;
+  background-color: aqua;
+  padding: 10px;
+}
+
+.header2 {
+  background-color: teal;
+}
+
+ul {
+  display: table;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  list-style: none;
+}
+
+/*make nav menu horisontal*/
+li {
+  display: table-cell;
+  width: 25%;
+}
+
+/*remove default html styling of links (underline, blue/purple)*/
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/*formating for contact-form class*/
+.contact-form {
+  max-width: 600px;
+}
+
+/*contact-form sub-element and textarea*/
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+}
