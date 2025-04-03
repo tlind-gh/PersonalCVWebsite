@@ -1,116 +1,128 @@
-/*very basic CSS-reset*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-}
+/*This CSS is a desktop first CSS-file, media queries adapting the content for mobile devices is at the bottom*/
 
+/*all boxes are boarder-boxes*/
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
-body,
-html {
-  height: 100vh;
-  width: 100vw;
+/*reset default margin and padding for all elements*/
+* {
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: "DM Sans", system-ui;
-  box-sizing: border-box;
+/*there should not be any overflow horizontally, but if there is, it will be hidden*/
+body,
+html {
+  height: 100%;
+  width: 100%;
   overflow-x: hidden;
 }
 
-html {
+/*general font styling (overridden in later sections when needed)*/
+body {
+  font-family: "DM Sans", system-ui;
+  line-height: 1.5;
   font-size: 16px;
 }
 
+/*remove numbers/bullet-points from lists*/
+ol,
+ul {
+  list-style: none;
+}
+
+/*remove default styling of links, text is set to white*/
 a {
   text-decoration: none;
   color: white;
 }
 
-header {
+/*styling of the three main containers in the body element*/
+header,
+main,
+footer {
   display: flex;
   background-color: lightslategray;
   margin: 1rem;
   padding: 1rem;
+}
+
+/*header has a fixed height*/
+header {
   height: 6rem;
 }
 
-.main-nav {
-  background-color: grey;
+.header-nav {
+  background-color: blue;
   width: 100%;
 }
 
-ul {
-  list-style: none;
+/*same size as main-nav, main-nav container only exists for sematic reasons (is a nav, and main-nav-ul is a ul*/
+.header-nav-ul {
   display: flex;
+  background-color: grey;
   justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
 
-li {
-  padding: 10px;
+.header-nav-link {
   font-size: 20px;
-  /*thickness of font*/
   font-weight: 700;
-  /*slight increase in letter spacing*/
   letter-spacing: 0.3px;
 }
 
 main {
-  margin: 1rem;
   gap: 1rem;
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
-  min-height: calc(100% - 13rem);
 }
 
-.main-content {
+.main-section-article {
   display: flex;
-  background-color: lightslategrey;
-  height: 1300px;
-  width: calc(73% - 2rem);
+  background-color: black;
   padding: 1rem;
+  flex-grow: 1;
+  height: 100rem;
 }
 
-.secondary-nav {
-  background-color: lightslategray;
-  width: 27%;
-  /*also set minimum heihgt!!*/
-  height: 80vh;
-  justify-content: space-evenly;
+/*holds space for the sticky nav-ul div*/
+.main-section-nav {
+  display: flex;
+  background-color: blue;
+  width: 20%;
+  min-width: 10rem;
+  align-self: stretch;
+}
+
+.main-section-nav-ul {
   display: flex;
   flex-direction: column;
+  background-color: gray;
+  height: 80vh;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
   position: sticky;
   top: 10vh;
 }
 
-.nav-button {
-  display: flex;
-  background-color: gray;
-  height: 4.5rem;
-  width: 4.5rem;
+.main-section-nav-link {
+  background-color: black;
+  height: 4rem;
+  width: 4rem;
   border-radius: 100%;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
 }
 
 footer {
-  background-color: lightslategrey;
-  margin: 1rem;
   height: 3rem;
 }
 
 @media (max-width: 500px) {
-  li {
+  .header-nav-link {
     font-size: 17px;
     font-weight: 600;
   }
@@ -119,15 +131,18 @@ footer {
     flex-direction: column-reverse;
   }
 
-  .secondary-nav {
-    flex-direction: row;
+  .main-section-nav {
     width: 100%;
-    /*also set minimum heihgt!!*/
     height: 6rem;
-    justify-content: space-evenly;
-    display: flex;
     position: sticky;
     top: 1rem;
+  }
+
+  .main-section-nav-ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 6rem;
   }
 
   .main-content {
