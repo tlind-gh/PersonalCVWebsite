@@ -5,7 +5,166 @@
   box-sizing: border-box;
 }
 
-/*communal styling for these sections*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "DM Sans", system-ui;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 16px;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  display: flex;
+  background-color: lightslategray;
+  margin: 1rem;
+  padding: 1rem;
+  height: 6rem;
+  justify-content: center;
+}
+
+.main-nav {
+  background-color: grey;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  font-size: 20px;
+  /*thickness of font*/
+  font-weight: 700;
+  /*slight increase in letter spacing*/
+  letter-spacing: 0.3px;
+  padding: 10px;
+}
+
+.main-content {
+  display: flex;
+  background-color: lightslategrey;
+  margin: 1rem;
+  height: 1000px;
+  width: calc(73% - 3rem);
+}
+
+.secondary-nav {
+  background-color: lightslategray;
+  /*also set minimum*/
+  width: 27%;
+  height: calc(100% - 9rem);
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 7rem;
+  margin: 1rem;
+}
+
+.nav-button {
+  display: flex;
+  background-color: gray;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  background-color: lightslategrey;
+  margin: 1rem;
+  height: 3rem;
+}
+
+@media (max-width: 500px) {
+  li {
+    font-size: 17px;
+    font-weight: 600;
+  }
+}
+
+/*
+
+.layout {
+  margin: 3rem;
+}
+
+header {
+  padding: 0.5rem;
+}
+
+.navbar {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 1rem 0 1rem 0;
+}
+
+
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 4rem;
+}
+
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  text-align: justify;
+}
+
+img {
+  width: 100%;
+}
+
+footer {
+  background-color: black;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem 0 3rem 0;
+}
+
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
@@ -13,10 +172,7 @@ body {
   text-decoration: none;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
+
 
 header {
   display: flex;
@@ -39,7 +195,6 @@ header {
 }
 
 li {
-  /*add text styles*/
   display: inline;
 }
 
@@ -74,9 +229,12 @@ main {
 }
 
 .nav-button {
-  width: 70px;
-  height: 70px;
+  display: flex;
   background-color: black;
+  height: 80px;
+  width: 80px;
+  justify-content: center;
+  align-items: center;
   border-radius: 100%;
 }
 
@@ -85,3 +243,5 @@ footer {
   background-color: lightblue;
   height: 50px;
 }
+
+*/
