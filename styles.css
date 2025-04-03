@@ -3,12 +3,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -19,14 +29,6 @@ body {
 
 html {
   font-size: 16px;
-}
-
-body,
-html {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
 }
 
 a {
@@ -40,12 +42,10 @@ header {
   margin: 1rem;
   padding: 1rem;
   height: 6rem;
-  justify-content: center;
 }
 
 .main-nav {
   background-color: grey;
-  padding: 0.5rem 1rem 0.5rem 1rem;
   width: 100%;
 }
 
@@ -56,35 +56,41 @@ ul {
 }
 
 li {
+  padding: 10px;
   font-size: 20px;
   /*thickness of font*/
   font-weight: 700;
   /*slight increase in letter spacing*/
   letter-spacing: 0.3px;
-  padding: 10px;
+}
+
+main {
+  margin: 1rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  min-height: calc(100% - 13rem);
 }
 
 .main-content {
   display: flex;
   background-color: lightslategrey;
-  margin: 1rem;
-  height: 1000px;
-  width: calc(73% - 3rem);
+  height: 1300px;
+  width: calc(73% - 2rem);
+  padding: 1rem;
 }
 
 .secondary-nav {
   background-color: lightslategray;
-  /*also set minimum*/
   width: 27%;
-  height: calc(100% - 9rem);
+  /*also set minimum heihgt!!*/
+  height: 80vh;
   justify-content: space-evenly;
-  align-items: center;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  right: 0;
-  top: 7rem;
-  margin: 1rem;
+  position: sticky;
+  top: 10vh;
 }
 
 .nav-button {
@@ -107,6 +113,25 @@ footer {
   li {
     font-size: 17px;
     font-weight: 600;
+  }
+
+  main {
+    flex-direction: column-reverse;
+  }
+
+  .secondary-nav {
+    flex-direction: row;
+    width: 100%;
+    /*also set minimum heihgt!!*/
+    height: 6rem;
+    justify-content: space-evenly;
+    display: flex;
+    position: sticky;
+    top: 1rem;
+  }
+
+  .main-content {
+    width: 100%;
   }
 }
 
