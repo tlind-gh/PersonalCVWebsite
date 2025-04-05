@@ -25,7 +25,7 @@ html {
 body {
   font-family: "DM Sans", system-ui;
   line-height: 1.5;
-  font-size: 10px;
+  font-size: 15px;
   letter-spacing: 0.5px;
 }
 
@@ -60,9 +60,10 @@ header {
 .header-name {
   background-color: gray;
   display: flex;
-  width: 15%;
+  width: 8rem;
   align-items: center;
-  padding-left: 1rem;
+  justify-content: center;
+  outline: 1px solid white;
 }
 
 h1 {
@@ -99,14 +100,6 @@ h1 {
   border-bottom: 1px solid white;
 }
 
-.main-section-article {
-  display: flex;
-  background-color: gray;
-  padding: 1rem;
-  flex-grow: 1;
-  height: 100rem;
-}
-
 /*holds space for the sticky nav-ul div*/
 .main-section-nav {
   display: flex;
@@ -136,10 +129,51 @@ h1 {
   height: 4rem;
   width: 4rem;
   border-radius: 100%;
-  letter-spacing: 0.5px;
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.main-section-nav-link:hover {
+  width: 8rem;
+  border-radius: 2rem;
+  justify-content: left;
+  padding-left: 1rem;
+}
+
+.main-section-article {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  padding: 1rem;
+  flex-grow: 1;
+  height: 100rem;
+  gap: 1rem;
+}
+
+.main-section-article-header {
+  background-color: slategray;
+}
+
+.main-section-article-preamble p {
+  background-color: slategray;
+  font-weight: 600;
+}
+
+.main-section-article-image {
+  background-color: slategray;
+  height: 6rem;
+  float: right;
+}
+
+.main-section-article-body {
+  background-color: slategray;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
 }
 
 footer {
@@ -147,6 +181,10 @@ footer {
 }
 
 @media (max-width: 700px) {
+  body {
+    font-size: 14px;
+  }
+
   .header-nav-ul {
     padding: 0 4vw 0 4vw;
   }
@@ -156,7 +194,7 @@ footer {
   }
 
   .header-name {
-    width: 18%;
+    width: 5.5rem;
   }
 
   h1 {
@@ -173,6 +211,11 @@ footer {
     font-size: 13px;
     font-weight: 400;
   }
+
+  .main-section-nav-link:hover {
+    width: 6rem;
+    padding-left: 8px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -181,7 +224,6 @@ footer {
   footer {
     padding: 0.6rem;
     gap: 0.6rem;
-    margin: 0.6rem;
   }
 
   header {
@@ -197,35 +239,59 @@ footer {
   }
 
   h1 {
-    letter-spacing: 15px;
+    letter-spacing: 10px;
   }
 
   .header-nav-link {
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 16.5px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
   }
 
   main {
     flex-direction: column-reverse;
     margin-top: 0;
-    padding-top: 0.4rem;
   }
 
   .main-section-nav {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     position: sticky;
-    top: 7rem;
+    top: 7.6rem;
   }
+
+  /*
+  .main-section-nav-text-mobile {
+    width: calc(100% - 3.2rem);
+    float: below;
+    background-color: blue;
+    position: fixed;
+    top: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    */
 
   .main-section-nav-ul {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    padding: 0;
     height: 100%;
+  }
+
+  .main-section-nav-link {
+    height: 3rem;
+    width: 3rem;
+    font-size: 12px;
+    font-weight: 400;
   }
 
   .main-content {
     width: 100%;
+    padding-top: 1rem;
   }
 }
