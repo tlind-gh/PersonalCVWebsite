@@ -1,5 +1,8 @@
 /*This CSS is a desktop first CSS-file, media queries adapting the content for mobile devices is at the bottom*/
 
+/*import fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 /*all boxes are boarder-boxes*/
 *,
 *::before,
@@ -23,10 +26,19 @@ html {
 
 /*general font styling (overridden in later sections when needed)*/
 body {
-  font-family: "DM Sans", system-ui;
-  line-height: 1.5;
+  font-family: "Hind", sans-serif;
+  font-weight: 300;
   font-size: 15px;
   letter-spacing: 0.5px;
+}
+
+img {
+  transition: all 0.5s ease;
+}
+
+p {
+  text-align: justify;
+  transition: all 0.5s ease;
 }
 
 /*remove numbers/bullet-points from lists*/
@@ -37,8 +49,11 @@ ul {
 
 /*remove default styling of links, text is set to white*/
 a {
+  display: flex;
   text-decoration: none;
   color: white;
+  align-items: center;
+  justify-content: center;
 }
 
 /*styling of the three main containers in the body element*/
@@ -88,11 +103,11 @@ h1 {
 }
 
 .header-nav-link {
-  display: flex;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .header-nav-link:hover {
@@ -119,15 +134,16 @@ h1 {
   align-items: center;
   position: sticky;
   top: 10vh;
+  min-height: 20rem;
 }
 
 .main-section-nav-link {
   display: flex;
   background-color: black;
-  justify-content: center;
   align-items: center;
   height: 4rem;
   width: 4rem;
+  padding-left: 0.4rem;
   border-radius: 100%;
   font-size: 15px;
   font-weight: 500;
@@ -135,11 +151,14 @@ h1 {
   transition: all 0.5s ease;
 }
 
+.icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
 .main-section-nav-link:hover {
   width: 8rem;
   border-radius: 2rem;
-  justify-content: left;
-  padding-left: 1rem;
 }
 
 .main-section-article {
@@ -172,8 +191,8 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
 }
 
 footer {
@@ -210,11 +229,16 @@ footer {
     width: 3.5rem;
     font-size: 13px;
     font-weight: 400;
+    padding-left: 6px;
   }
 
   .main-section-nav-link:hover {
     width: 6rem;
-    padding-left: 8px;
+  }
+
+  .icon {
+    width: 2.8rem;
+    height: 2.8rem;
   }
 }
 
@@ -277,10 +301,11 @@ footer {
 
   .main-section-nav-ul {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0 3rem 0 3rem;
     height: 100%;
+    min-height: 0;
   }
 
   .main-section-nav-link {
@@ -288,6 +313,16 @@ footer {
     width: 3rem;
     font-size: 12px;
     font-weight: 400;
+    padding-left: 4px;
+  }
+
+  .main-section-nav-link:hover {
+    width: 8rem;
+  }
+
+  .icon {
+    height: 2.4rem;
+    width: 2.4rem;
   }
 
   .main-content {
