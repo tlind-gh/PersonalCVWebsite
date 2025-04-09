@@ -78,11 +78,8 @@ ul {
 
 /*remove default styling of links, text is set to white*/
 a {
-  display: flex;
   text-decoration: none;
   color: white;
-  align-items: center;
-  justify-content: center;
 }
 
 /*styling of the three main containers in the body element*/
@@ -125,16 +122,19 @@ header {
   height: 100%;
 }
 
-.header-nav-link {
+.header-nav-link a {
+  height: 100%;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  vertical-align: middle;
 }
 
-.header-nav-link:hover,
-.current {
+.current a {
+  font-weight: 900;
+}
+
+.header-nav-link:hover a {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
 }
@@ -167,14 +167,14 @@ header {
   align-items: center;
   height: 4rem;
   width: 4rem;
-  padding-left: 0.4rem;
+  padding-left: 0.5rem;
   border-radius: 100%;
   transition: all 0.5s ease;
 }
 
 .icon {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .icon-text {
@@ -183,11 +183,13 @@ header {
   font-size: 20px;
   font-weight: 500;
   text-align: center;
+  color: white;
 }
 
 .main-section-nav-link:hover {
   width: 11rem;
   border-radius: 2rem;
+  cursor: pointer;
 }
 
 .main-section-content {
@@ -196,7 +198,6 @@ header {
   background-color: gray;
   padding: 8vh 6vw;
   flex-grow: 1;
-  height: 100rem;
   gap: 2rem;
 }
 
@@ -258,12 +259,32 @@ header {
   border-bottom: 1px solid gray;
 }
 
-.courses {
-  padding-left: 1rem;
+.bullet-list {
+  padding-left: 2rem;
+  list-style-type: disc;
 }
 
-.courses li {
+.bullet-list li {
   font-size: 16px;
+}
+
+.skills-article {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.skills-container {
+  background-color: aqua;
+  padding: 1rem;
+  width: 48%;
+  margin: 1%;
+}
+
+.skills-header {
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .contact-form {
@@ -360,8 +381,8 @@ footer {
   }
 
   .icon {
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2.6rem;
+    height: 2.6rem;
   }
 
   .icon-text {
@@ -375,6 +396,10 @@ footer {
 
   .main-section-content {
     padding: 8vh 4vw;
+  }
+
+  .skills-container {
+    width: 100%;
   }
 }
 
@@ -407,10 +432,11 @@ footer {
     text-align: center;
   }
 
-  .header-nav-link {
-    font-size: 16.5px;
+  .header-nav-link a {
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 1.5px;
+    margin-top: 0.5rem;
   }
 
   main {
@@ -431,7 +457,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem;
+    padding: 0 5vw;
     height: 100%;
     min-height: 0;
   }
@@ -459,5 +485,24 @@ footer {
 
   .icon-text {
     width: 4.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    height: 8rem;
+  }
+
+  .header-nav-ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 4.2rem;
+  }
+
+  .header-nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

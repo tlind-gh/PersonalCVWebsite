@@ -26,6 +26,7 @@
       </nav>
     </header>
 
+    <!--main section with a contact form and links-->
     <main>
       <div class="main-section-content">
         <div class="main-section-content-header">
@@ -36,6 +37,9 @@
           <p>
             Want to get to know me even better? Check out my GitHub and LinkedIn
             via the menu to the right!
+          </p>
+          <p class="note">
+            The contact form and the email link are not yet implemented fully.
           </p>
         </section>
         <form class="contact-form">
@@ -81,44 +85,44 @@
       </div>
       <nav class="main-section-nav">
         <ul class="main-section-nav-ul">
+          <a href="https://github.com/tlind-gh" target="_blank"></a>
           <li
             class="main-section-nav-link"
             id="github"
             onmouseover="showMainNavText(this)"
             onmouseout="hideMainNavText(this)"
           >
-            <a href="https://github.com/tlind-gh" target="_blank">
               <img class="icon" src="svg/github.svg" />
               <div class="icon-text" id="github-text">GitHub</div>
-            </a>
           </li>
+        </a>
 
-          <li
-            class="main-section-nav-link"
-            id="linkedin"
-            onmouseover="showMainNavText(this)"
-            onmouseout="hideMainNavText(this)"
+          <a
+            href="https://www.linkedin.com/in/teo-lind-85966b15254039/"
+            target="_blank"
           >
-            <a
-              href="https://www.linkedin.com/in/teo-lind-85966b15254039/"
-              target="_blank"
+            <li
+              class="main-section-nav-link"
+              id="linkedin"
+              onmouseover="showMainNavText(this)"
+              onmouseout="hideMainNavText(this)"
             >
               <img class="icon" src="/svg/linkedin.svg" alt="LinkedIn logo" />
               <div class="icon-text" id="linkedin-text">LinkedIn</div>
-            </a>
-          </li>
+            </li>
+          </a>
 
+          <a href="#"></a>
           <li
             class="main-section-nav-link"
             id="email"
             onmouseover="showMainNavText(this)"
             onmouseout="hideMainNavText(this)"
           >
-            <a href="#">
               <img class="icon" src="/svg/email.svg" alt="letter icon" />
               <div class="icon-text" id="email-text">Email</div>
-            </a>
           </li>
+        </a>
         </ul>
       </nav>
     </main>

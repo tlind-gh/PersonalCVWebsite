@@ -16,7 +16,9 @@
       <nav class="header-nav">
         <ul class="header-nav-ul">
           <li class="header-nav-link"><a href="index.html">Home</a></li>
-          <li class="header-nav-link current"><a href="projects.html">Projects</a></li>
+          <li class="header-nav-link current">
+            <a href="projects.html">Projects</a>
+          </li>
           <li class="header-nav-link"><a href="cv.html">CV</a></li>
           <li class="header-nav-link"><a href="contact.html">Contact</a></li>
         </ul>
@@ -48,9 +50,35 @@
 
       <nav class="main-section-nav">
         <ul class="main-section-nav-ul">
-          <li class="main-section-nav-link"><a href="#">Proj 1</a></li>
-          <li class="main-section-nav-link"><a href="#">Proj 2</a></li>
-          <li class="main-section-nav-link"><a href="#">Proj 3</a></li>
+          <li
+            class="main-section-nav-link"
+            id="plant-swap"
+            onmouseover="showMainNavText(this)"
+            onmouseout="hideMainNavText(this)"
+          >
+            <img class="icon" src="/svg/plant-swap.svg" alt="potted plant" />
+            <div class="icon-text" id="plant-swap-text">Plant Swap</div>
+          </li>
+
+          <li
+            class="main-section-nav-link"
+            id="air-bnb"
+            onmouseover="showMainNavText(this)"
+            onmouseout="hideMainNavText(this)"
+          >
+            <img class="icon" src="/svg/air-bnb.svg" alt="house" />
+            <div class="icon-text" id="air-bnb-text">AirBnB Clone</div>
+          </li>
+
+          <li
+            class="main-section-nav-link"
+            id="cv-page"
+            onmouseover="showMainNavText(this)"
+            onmouseout="hideMainNavText(this)"
+          >
+            <img class="icon" src="/svg/cv-page.svg" alt="cv" />
+            <div class="icon-text" id="cv-page-text">Skills</div>
+          </li>
         </ul>
       </nav>
     </main>
