@@ -3,7 +3,12 @@
 /*import fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/*all boxes are boarder-boxes*/
+/*
+CSS RESET SECTION -----------------------------------------------------------------------------------------------------------------------------
+Basic/minimal CSS-reset
+*/
+
+/*set all boxes boarder-boxes*/
 *,
 *::before,
 *::after {
@@ -16,7 +21,7 @@
   padding: 0;
 }
 
-/*there should not be any overflow horizontally, but if there is, it will be hidden*/
+/*body and html covers full viewport, also hide any horizontal overflow*/
 body,
 html {
   height: 100%;
@@ -24,8 +29,12 @@ html {
   overflow-x: hidden;
 }
 
-/*general font styling (overridden in later sections when needed)*/
-/*textarea and button added here as well, otherwise they retain their default styling*/
+/*
+GENERAL TEXT STYLING  --------------------------------------------------------------------------------------------------------------------
+general font styling for body and different heading, paragraph etc. elements. Overridden in later sections when needed
+*/
+
+/*textarea and button added here as well, otherwise they retained their default styling*/
 body,
 textarea,
 button {
@@ -45,6 +54,7 @@ h1 {
 h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
+  padding: 1rem 0;
 }
 
 h3 {
@@ -82,6 +92,11 @@ a {
   color: white;
 }
 
+/*
+MAIN DIV STYLINGS  --------------------------------------------------------------------------------------------------------------------
+size, margin, padding etc. for the <header>, <main> and <footer> elements
+*/
+
 /*styling of the three main containers in the body element*/
 header,
 main,
@@ -93,10 +108,19 @@ footer {
   gap: 1rem;
 }
 
-/*header has a fixed height*/
+/*header and footer have fixed heights*/
 header {
   height: 6rem;
 }
+
+footer {
+  height: 3rem;
+}
+
+/*
+HEADER SECTION ELEMENTS  --------------------------------------------------------------------------------------------------------------------
+styling of elements within the <header> section 
+*/
 
 .header-name {
   background-color: gray;
@@ -112,7 +136,6 @@ header {
   flex-grow: 1;
 }
 
-/*same size as main-nav, main-nav container only exists for sematic reasons (is a nav, and main-nav-ul is a ul*/
 .header-nav-ul {
   display: flex;
   background-color: grey;
@@ -138,6 +161,24 @@ header {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
 }
+
+/*
+MAIN SECTION ELEMENTS  --------------------------------------------------------------------------------------------------------------------
+styling of elements within the <main> section 
+
+Index of subsections of the main element styling section
+1. Main section nav
+2. Main section content
+  a. general
+  b. Project page specific
+  c. CV page specific
+  d. Contact page specific
+*/
+
+/*
+1. MAIN SECTION NAV ---------------------------------------------------------
+Styling of secondary navigation menu
+*/
 
 /*holds space for the sticky nav-ul div*/
 .main-section-nav {
@@ -173,7 +214,6 @@ header {
 }
 
 .icon {
-  width: 3rem;
   height: 3rem;
 }
 
@@ -191,6 +231,11 @@ header {
   border-radius: 2rem;
   cursor: pointer;
 }
+
+/*
+2a. Main section content: GENERAL ---------------------------------------------------------
+General styling of main content area
+*/
 
 .main-section-content {
   display: flex;
@@ -221,6 +266,50 @@ header {
 
 .main-section-content-body {
   background-color: slategray;
+}
+
+/*
+2B. Main section content: PROJECT PAGE SPECIFIC ----------------------------------------------------------------------------------------------
+Styling of elements specific to the project page of the website
+*/
+
+.keywords {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  padding: 0.5rem 0;
+  letter-spacing: 3px;
+  text-align: justify;
+  line-height: 25px;
+}
+
+.keywords span {
+  font-weight: 500;
+}
+
+.project-body {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+}
+
+.project-link {
+  width: 8rem;
+  text-align: right;
+  margin: 1rem;
+}
+
+/*
+2C. Main section content: CV PAGE SPECIFIC ----------------------------------------------------------------------------------------------
+Styling of elements specific to the CV page of the website
+*/
+
+.cv-section {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid gray;
 }
 
 .cv-item {
@@ -254,11 +343,6 @@ header {
   font-style: italic;
 }
 
-.cv-section {
-  margin-bottom: 2rem;
-  border-bottom: 1px solid gray;
-}
-
 .bullet-list {
   padding-left: 2rem;
   list-style-type: disc;
@@ -286,6 +370,11 @@ header {
   font-size: 18px;
   font-weight: 600;
 }
+
+/*
+2D. Main section content: CONTACT PAGE SPECIFIC ----------------------------------------------------------------------------------------------
+Styling of elements specific to the contact page of the website
+*/
 
 .contact-form {
   display: flex;
@@ -331,10 +420,9 @@ header {
   color: white;
 }
 
-footer {
-  height: 3rem;
-}
-
+/*
+VIEWPORT MEDIA QUERY 1 ------------------------------------------------------------------------------------------------------------
+Adaptation for slimmer window width on desktop or ipad*/
 @media (max-width: 800px) {
   body {
     font-size: 14px;
@@ -381,7 +469,6 @@ footer {
   }
 
   .icon {
-    width: 2.6rem;
     height: 2.6rem;
   }
 
@@ -402,6 +489,10 @@ footer {
     width: 100%;
   }
 }
+
+/*
+VIEWPORT MEDIA QUERY 2 ------------------------------------------------------------------------------------------------------------
+Adaptation for wide phone screens*/
 
 @media (max-width: 575px) {
   header,
@@ -480,13 +571,16 @@ footer {
 
   .icon {
     height: 2.3rem;
-    width: 2.3rem;
   }
 
   .icon-text {
     width: 4.8rem;
   }
 }
+
+/*
+VIEWPORT MEDIA QUERY 3 ------------------------------------------------------------------------------------------------------------
+Adaptation for slimmer phone screens*/
 
 @media (max-width: 400px) {
   header {
