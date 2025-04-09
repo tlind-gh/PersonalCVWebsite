@@ -1,4 +1,7 @@
-function mainSectionNavHover() {
-  document.getElementsById("main-section-nav-text-mobile").style.height =
-    "2rem";
+function showMainNavText(obj) {
+  document.getElementById(obj.id + "-text").style.display = "block";
+}
+
+function hideMainNavText(obj) {
+  document.getElementById(obj.id + "-text").style.display = "none";
 }

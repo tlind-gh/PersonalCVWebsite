@@ -25,11 +25,24 @@ html {
 }
 
 /*general font styling (overridden in later sections when needed)*/
-body {
+body,
+textarea,
+button {
   font-family: "Hind", sans-serif;
   font-weight: 300;
   font-size: 15px;
   letter-spacing: 0.5px;
+}
+
+h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
 }
 
 img {
@@ -81,12 +94,6 @@ header {
   outline: 1px solid white;
 }
 
-h1 {
-  color: white;
-  font-size: 20px;
-  font-weight: 100;
-}
-
 .header-nav {
   background-color: blue;
   flex-grow: 1;
@@ -97,7 +104,7 @@ h1 {
   display: flex;
   background-color: grey;
   justify-content: space-between;
-  padding: 0 4vw 0 4vw;
+  padding: 0 4vw;
   align-items: center;
   height: 100%;
 }
@@ -111,8 +118,8 @@ h1 {
 }
 
 .header-nav-link:hover {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 /*holds space for the sticky nav-ul div*/
@@ -145,8 +152,6 @@ h1 {
   width: 4rem;
   padding-left: 0.4rem;
   border-radius: 100%;
-  font-size: 15px;
-  font-weight: 500;
   transition: all 0.5s ease;
 }
 
@@ -156,55 +161,109 @@ h1 {
 }
 
 .icon-text {
-  transition: all 0.5s ease;
+  display: none;
+  width: 6.5rem;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .main-section-nav-link:hover {
-  width: 10rem;
+  width: 11rem;
   border-radius: 2rem;
 }
 
-.main-section-article {
+.main-section-content {
   display: flex;
   flex-direction: column;
   background-color: gray;
-  padding: 1rem;
+  padding: 3rem 3rem;
   flex-grow: 1;
   height: 100rem;
   gap: 1rem;
 }
 
-.main-section-article-header {
-  background-color: slategray;
+.main-section-article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.main-section-article-preamble p {
+.main-section-content-header {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.main-section-content-preamble p {
   background-color: slategray;
   font-weight: 600;
 }
 
-.main-section-article-image {
+.main-section-content-image {
   background-color: slategray;
   height: 6rem;
   float: right;
 }
 
-.main-section-article-body {
+.main-section-content-body {
   background-color: slategray;
 }
 
-h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 40px;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 2px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1.5px solid black;
+}
+
+.contact-form label,
+.contact-form button {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.contact-form input {
+  height: 1.8rem;
+  font-family: "Hind", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.contact-form textarea {
+  height: calc(1.8rem * 5);
+}
+
+.contact-form button {
+  height: 1.8rem;
+  width: 5rem;
+  margin: 8px 0;
+  background-color: black;
+  color: white;
 }
 
 footer {
   height: 3rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   body {
     font-size: 14px;
+  }
+
+  label {
+    font-size: 16px;
   }
 
   .header-nav-ul {
@@ -221,6 +280,10 @@ footer {
 
   h1 {
     font-size: 18.5px;
+  }
+
+  h2 {
+    font-size: 35px;
   }
 
   .main-section-nav {
@@ -243,9 +306,14 @@ footer {
     width: 2.8rem;
     height: 2.8rem;
   }
+
+  .icon-text {
+    width: 4.2rem;
+    font-size: 16px;
+  }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   header,
   main,
   footer {
@@ -289,24 +357,11 @@ footer {
     top: 7.6rem;
   }
 
-  /*
-  .main-section-nav-text-mobile {
-    width: calc(100% - 3.2rem);
-    float: below;
-    background-color: blue;
-    position: fixed;
-    top: 12rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-    */
-
   .main-section-nav-ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem 0 3rem;
+    padding: 0 3rem;
     height: 100%;
     min-height: 0;
   }
@@ -316,7 +371,7 @@ footer {
     width: 3rem;
     font-size: 12px;
     font-weight: 400;
-    padding-left: 4px;
+    padding-left: 5px;
   }
 
   .main-section-nav-link:hover {
@@ -324,12 +379,16 @@ footer {
   }
 
   .icon {
-    height: 2.4rem;
-    width: 2.4rem;
+    height: 2.3rem;
+    width: 2.3rem;
   }
 
-  .main-content {
+  .icon-text {
+    width: 4.8rem;
+  }
+
+  .main-section-content {
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 3rem;
   }
 }

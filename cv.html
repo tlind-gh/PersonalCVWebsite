@@ -25,27 +25,63 @@
     </header>
 
     <main>
-      <article class="main-section-article"></article>
+      <div class="main-section-content">
+        <article class="main-section-article" id="education-article">
+          <section class="main-section-content-header"><h2>Title</h2></section>
+          <section class="main-section-content-preamble">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </section>
+          <section class="main-section-content-image">IMAGE GOES HERE</section>
+          <section class="main-section-content-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </section>
+        </article>
+      </div>
       <nav class="main-section-nav">
         <ul class="main-section-nav-ul">
-          <li class="main-section-nav-link">
+          <li
+            class="main-section-nav-link"
+            id="education"
+            onmouseover="showMainNavText(this)"
+            onmouseout="hideMainNavText(this)"
+          >
             <a href="#">
-              <img class="icon" src="/svg/education.svg" alt="graduation cap"/>
-              <label class="icon-text" id="Education"></label>
+              <img class="icon" src="/svg/education.svg" alt="graduation cap" />
+              <div class="icon-text" id="education-text">Education</div>
             </a>
           </li>
 
-          <li class="main-section-nav-link">
+          <li
+            class="main-section-nav-link"
+            id="work-life"
+            onmouseover="showMainNavText(this)"
+            onmouseout="hideMainNavText(this)"
+          >
             <a href="#">
-              <img class="icon" src="/svg/work.svg" alt="breifcase"/>
-              <label class="icon-text" id="Work Life"></label>
+              <img class="icon" src="/svg/work.svg" alt="breifcase" />
+              <div class="icon-text" id="work-life-text">Work Life</div>
             </a>
           </li>
 
-          <li class="main-section-nav-link">
+          <li
+            class="main-section-nav-link"
+            id="skills"
+            onmouseover="showMainNavText(this)"
+            onmouseout="hideMainNavText(this)"
+          >
             <a href="#">
               <img class="icon" src="/svg/interests.svg" alt="palette" />
-              <label class="icon-text" id="Interests"></label>
+              <div class="icon-text" id="skills-text">Skills</div>
             </a>
           </li>
         </ul>

@@ -25,32 +25,91 @@
     </header>
 
     <main>
-        <article class="main-section-article"></article>
-        <nav class="main-section-nav">
-          <ul class="main-section-nav-ul">
-            <li class="main-section-nav-link">
-              <a href="https://github.com/tlind-gh" target="_blank">
-                <img class="icon" src="svg/github.svg"/>
-                <label class="icon-text" id="GitHub"></label>
-              </a>
-            </li>
+      <div class="main-section-content">
+        <div class="main-section-content-header">
+          <h2>Contact form</h2>
+        </div>
+        <form class="contact-form">
+          <div>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="write your name here"
+            />
+          </div>
 
-            <li class="main-section-nav-link">
-              <a href="https://www.linkedin.com/in/teo-lind-85966b15254039/" target="_blank">             
-                <img class="icon" src="/svg/linkedin.svg" alt="LinkedIn logo"/>
-                <label class="icon-text" id="LinkedIn"></label>
-              </a>
-            </li>
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="write your email here"
+            />
+          </div>
 
-            <li class="main-section-nav-link">
-              <a href="#">
-                <img class="icon" src="/svg/email.svg" alt="letter"/>
-                <label class="icon-text" id="Email"></label>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </main>
+          <div>
+            <label for="subject">Subject</label>
+            <input
+              type="subject"
+              name="subject"
+              required
+              placeholder="write your subject here"
+            />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea rows="5" name="message" required> </textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+      <nav class="main-section-nav">
+        <ul class="main-section-nav-ul">
+          <li
+            class="main-section-nav-link"
+            id="github"
+            onmouseover="showMainNavText(this)"
+            onmouseout="hideMainNavText(this)"
+          >
+            <a href="https://github.com/tlind-gh" target="_blank">
+              <img class="icon" src="svg/github.svg" />
+              <div class="icon-text" id="github-text">GitHub</div>
+            </a>
+          </li>
+
+          <li
+            class="main-section-nav-link"
+            id="linkedin"
+            onmouseover="showMainNavText(this)"
+            onmouseout="hideMainNavText(this)"
+          >
+            <a
+              href="https://www.linkedin.com/in/teo-lind-85966b15254039/"
+              target="_blank"
+            >
+              <img class="icon" src="/svg/linkedin.svg" alt="LinkedIn logo" />
+              <div class="icon-text" id="linkedin-text">LinkedIn</div>
+            </a>
+          </li>
+
+          <li
+            class="main-section-nav-link"
+            id="email"
+            onmouseover="showMainNavText(this)"
+            onmouseout="hideMainNavText(this)"
+          >
+            <a href="#">
+              <img class="icon" src="/svg/email.svg" alt="letter icon" />
+              <div class="icon-text" id="email-text">Email</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </main>
 
     <footer></footer>
