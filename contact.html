@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Teo Lind</title>
+    <title>Contact | Teo Lind</title>
 
-    <!---reference to css sheet-->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <!--header with name and navigation menu, same on all pages-->
     <header>
       <div class="header-name">
         <h1>Teo Lind</h1>
@@ -19,7 +19,9 @@
           <li class="header-nav-link"><a href="index.html">Home</a></li>
           <li class="header-nav-link"><a href="projects.html">Projects</a></li>
           <li class="header-nav-link"><a href="cv.html">CV</a></li>
-          <li class="header-nav-link"><a href="contact.html">Contact</a></li>
+          <li class="header-nav-link current">
+            <a href="contact.html">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -27,11 +29,20 @@
     <main>
       <div class="main-section-content">
         <div class="main-section-content-header">
-          <h2>Contact form</h2>
+          <h2>Contact</h2>
         </div>
+        <section class="main-section-content-preamble">
+          <p>Want to get in touch? Fill out the contact form below!</p>
+          <p>
+            Want to get to know me even better? Check out my GitHub and LinkedIn
+            via the menu to the right!
+          </p>
+        </section>
         <form class="contact-form">
           <div>
-            <label for="name">Name</label>
+            <div>
+              <label for="name">Name</label><span class="error">Error</span>
+            </div>
             <input
               type="text"
               name="name"

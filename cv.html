@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Teo Lind</title>
-
-    <!---reference to css sheet-->
+    <title>CV | Teo Lind</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <!--header with name and navigation menu, same on all pages-->
     <header>
       <div class="header-name">
         <h1>Teo Lind</h1>
@@ -18,32 +17,161 @@
         <ul class="header-nav-ul">
           <li class="header-nav-link"><a href="index.html">Home</a></li>
           <li class="header-nav-link"><a href="projects.html">Projects</a></li>
-          <li class="header-nav-link"><a href="cv.html">CV</a></li>
+          <li class="header-nav-link current"><a href="cv.html">CV</a></li>
           <li class="header-nav-link"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
+    <!--main section with a secondary navigation menu and main content-->
     <main>
       <div class="main-section-content">
-        <article class="main-section-article" id="education-article">
-          <section class="main-section-content-header"><h2>Title</h2></section>
+        <article class="main-section-article" id="work-life-article">
+          <section class="main-section-content-header">
+            <h2>Education</h2>
+          </section>
           <section class="main-section-content-preamble">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              I am currently studying to become a Full Stack Developer, with a
+              main focus on Java and JavaScript. Apart from this, also have some
+              previous experience with Python through Bioinformatics University
+              courses.
+            </p>
+            <p>
+              Before embarking upon my current career, I worked in the Life
+              Science field. My Life Science education is listed at the end of
+              this page.
             </p>
           </section>
-          <section class="main-section-content-image">IMAGE GOES HERE</section>
+
           <section class="main-section-content-body">
+            <div class="cv-section">
+              <h3>Current Education</h3>
+
+              <div class="cv-item">
+                <div class="cv-item-header">
+                  <div class="cv-item-title now">Java Developer</div>
+                  <div class="cv-item-years">Aug 2024 - Jun 2026</div>
+                </div>
+                <div class="cv-item-place">Teknikhögskolan, Gothenburg</div>
+                <h4>Courses</h4>
+                <ul class="courses">
+                  <li>• Programming basics</li>
+                  <li>• Databases</li>
+                  <li>• Backend</li>
+                  <li>• Frontend</li>
+                  <li>• Advanced object oriented design</li>
+                  <li>• Intership period 1</li>
+                  <li>• Delivering software</li>
+                  <li>• Intership period 2</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="cv-section">
+              <h3>Other programming courses</h3>
+
+              <div class="cv-item">
+                <div class="cv-item-header">
+                  <div class="cv-item-title">
+                    Bioinformatic Analysis with Python 1
+                  </div>
+                  <div class="cv-item-years">Spring 2022</div>
+                </div>
+                <div class="cv-item-place">University of Skövde, Skövde</div>
+              </div>
+
+              <div class="cv-item">
+                <div class="cv-item-header">
+                  <div class="cv-item-title">
+                    Bioinformatic Analysis with Python 2
+                  </div>
+                  <div class="cv-item-years">Spring 2023</div>
+                </div>
+                <div class="cv-item-place">University of Skövde, Skövde</div>
+              </div>
+            </div>
+
+            <div class="cv-section">
+              <h3>Life Science Education</h3>
+
+              <div class="cv-item">
+                <div class="cv-item-header">
+                  <div class="cv-item-title">
+                    Master of Science, Molecular Biology
+                  </div>
+                  <div class="cv-item-years">Aug 2016 - Jul 2018</div>
+                </div>
+                <div class="cv-item-place">
+                  Gothenburg University, Gothenburg
+                </div>
+              </div>
+
+              <div class="cv-item">
+                <div class="cv-item-header">
+                  <div class="cv-item-title">
+                    Bachelor of Science, Molecular Biology
+                  </div>
+                  <div class="cv-item-years">Aug 2011 - Jul 2014</div>
+                </div>
+                <div class="cv-item-place">
+                  Gothenburg University, Gothenburg
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <article class="main-section-article" id="work-life-article">
+          <section class="main-section-content-header">
+            <h2>Work Life</h2>
+          </section>
+          <section class="main-section-content-preamble">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              As a student, I have not yet embarked upon my work life journey as
+              a Full Stock Developer. Hence, this page is currently only
+              dedicated to work experience from my previous career within Life
+              Science.
             </p>
+          </section>
+          <section class="main-section-content-body">
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <div class="cv-item-title">R&D Researcher</div>
+                <div class="cv-item-years">Jan 2024 - Aug 2024</div>
+              </div>
+              <div class="cv-item-place">TATAA Biocenter, Gothenburg</div>
+              <div class="cv-item-description">
+                Research and Development of new Scientific approaches within the
+                field of Advanced Nucleic Acid Analysis.
+              </div>
+            </div>
+
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <div class="cv-item-title">Laboratory Scientist</div>
+                <div class="cv-item-years">Aug 2019 - Dec 2021</div>
+              </div>
+              <div class="cv-item-place">TATAA Biocenter, Gothenburg</div>
+              <div class="cv-item-description">
+                In depth profiling and analysis of Nucleic Acids within the
+                context of Customer Service projects.
+              </div>
+            </div>
+
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <div class="cv-item-title">Biologist, Cytopathology</div>
+                <div class="cv-item-years">Jan 2019 - Jul 2019</div>
+              </div>
+              <div class="cv-item-place">
+                Sahlgrenska University Hospital, Gothenburg
+              </div>
+              <div class="cv-item-description">
+                Cytopathology analysis of Patient Samples at the
+                Cytologlaboratorier unit at Sahlgrenska University Hospital.
+              </div>
+            </div>
           </section>
         </article>
       </div>
@@ -63,13 +191,13 @@
 
           <li
             class="main-section-nav-link"
-            id="work-life"
+            id="cv"
             onmouseover="showMainNavText(this)"
             onmouseout="hideMainNavText(this)"
           >
             <a href="#">
               <img class="icon" src="/svg/work.svg" alt="breifcase" />
-              <div class="icon-text" id="work-life-text">Work Life</div>
+              <div class="icon-text" id="cv-text">Work Life</div>
             </a>
           </li>
 
