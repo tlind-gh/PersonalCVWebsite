@@ -228,6 +228,10 @@ Styling of secondary navigation menu
   white-space: nowrap;
 }
 
+.line-break {
+  white-space: wrap;
+}
+
 .main-section-nav-link:hover {
   width: 11rem;
   border-radius: 2rem;
@@ -252,9 +256,13 @@ General styling of main content area
 }
 
 .main-section-article {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 2rem;
+}
+
+.default {
+  display: flex;
 }
 
 .main-section-content-preamble p {
@@ -296,15 +304,46 @@ Styling of elements specific to the project page of the website
 
 .project-body {
   width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 1rem;
+  display: block;
 }
 
-.project-link {
+.project-link-1,
+.project-link-2 {
   width: 8rem;
-  text-align: right;
-  margin: 1rem;
+  display: flex;
+  background-repeat: no-repeat;
+  background-color: black;
+  padding: 1rem;
+  box-shadow: 5px 5px 10px 0 white inset, -5px -5px 10px 0 white inset;
+}
+
+.project-link-1 {
+  margin: 0 1rem 1rem 0;
+  width: 31rem;
+  float: inline-start;
+  background-image: url(svg/plantgithub.png);
+  background-size: 40rem 13rem;
+  height: 12rem;
+}
+
+.project-link-2 {
+  margin: 1rem 0 0 1rem;
+  width: 31rem;
+  float: inline-end;
+  background-image: url(svg/plantgithub.png);
+  background-size: 40rem 13rem;
+  height: 12rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.project-link-1 span,
+.project-link-2 span {
+  font-weight: 700;
+  font-size: 20px;
+  text-shadow: 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black,
+    0 0 30px black, 0 0 30px black, 0 0 30px black, 0 0 30px black;
+  padding: 1rem;
 }
 
 /*
@@ -441,7 +480,7 @@ Styling of elements specific to the contact page of the website
 /*
 VIEWPORT MEDIA QUERY 1 ------------------------------------------------------------------------------------------------------------
 Adaptation for slimmer window width on desktop or ipad*/
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   body {
     font-size: 14px;
   }
@@ -510,6 +549,22 @@ Adaptation for slimmer window width on desktop or ipad*/
 
   .skills-article {
     height: auto;
+  }
+
+  .project-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-link-1,
+  .project-link-2 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .line-break-small {
+    white-space: wrap;
   }
 }
 
@@ -600,8 +655,11 @@ Adaptation for wide phone screens*/
   .icon-text {
     width: 4.8rem;
   }
-}
 
+  .project-link-1 {
+    height: 10rem;
+  }
+}
 /*
 VIEWPORT MEDIA QUERY 3 ------------------------------------------------------------------------------------------------------------
 Adaptation for slimmer phone screens*/

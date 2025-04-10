@@ -27,8 +27,33 @@
 
     <!--main section with a secondary navigation menue and main content-->
     <main>
+      <!--different aticles that are hidden/shown based upon the secondary navigation menu-->
       <div class="main-section-content">
-        <!--different aticles that are hidden/shown based upon the secondary navigation menu-->
+        <!--default article-->
+        <article class="main-section-article default">
+          <section class="main-section-content-header">
+            <h2>PROJECTS</h2>
+          </section>
+          <section class="main-section-content-preamble">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </section>
+
+          <section class="main-section-content-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </section>
+        </article>
+
+        <!--articles accessed by the secondary nav menu-->
         <article class="main-section-article" id="plant-swap-article">
           <section class="main-section-content-header">
             <h2>Plant Swap</h2>
@@ -47,14 +72,11 @@
           </section>
 
           <section class="main-section-content-body project-body">
-            <div class="project-links">
-              <div class="project-link">
-                <a href="#" target="_blank"><img src="" alt="code" /></a>
-              </div>
-              <div class="project-link">
-                <a href="#" target="_blank">INSERT POSTMAN</a>
-              </div>
-            </div>
+            <a href="#" target="_blank">
+              <div class="project-link-1">
+                <span>GitHub Repository</span>
+              </div></a
+            >
             <div class="article-main-text">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -63,6 +85,122 @@
                 nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
+            <a href="#" target="_blank"
+              ><div class="project-link-2">
+                <span>Postman Documentation</span>
+              </div></a
+            >
+          </section>
+        </article>
+
+        <article class="main-section-article" id="plant-swap-article">
+          <section class="main-section-content-header">
+            <h2>Plant Swap</h2>
+          </section>
+          <div class="keywords">
+            <span>Keywords: </span>Java, SQL, Spring Boot, PostgreSQL, Postman,
+            Docker, Solo Project
+          </div>
+          <section class="main-section-content-preamble">
+            <p>
+              This is a REST API using Spring boot, postgreSQL and Docker. The
+              application the backend part of a plant swap service with which
+              users can publish plant listings and acquire plant listed by other
+              users.
+            </p>
+          </section>
+
+          <section class="main-section-content-body project-body">
+            <a href="#" target="_blank">
+              <div class="project-link-1">
+                <span>GitHub Repository</span>
+              </div></a
+            >
+            <div class="article-main-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <a href="#" target="_blank"
+              ><div class="project-link-2">
+                <span>Postman Documentation</span>
+              </div></a
+            >
+          </section>
+        </article>
+
+        <article class="main-section-article" id="air-bnb-article">
+          <section class="main-section-content-header">
+            <h2>AirBnB Clone</h2>
+          </section>
+          <div class="keywords">
+            <span>Keywords: </span>Java, NoSQL, Spring Boot, MongoDB Atlas,
+            Postman, Docker, Group Project, Agile Workflow
+          </div>
+          <section class="main-section-content-preamble">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </section>
+
+          <section class="main-section-content-body project-body">
+            <a href="#" target="_blank">
+              <div class="project-link-1">
+                <span>GitHub Repository</span>
+              </div></a
+            >
+            <div class="article-main-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <a href="#" target="_blank"
+              ><div class="project-link-2">
+                <span>Postman Documentation</span>
+              </div></a
+            >
+          </section>
+        </article>
+
+        <article class="main-section-article" id="cv-page-article">
+          <section class="main-section-content-header">
+            <h2>Personal Website</h2>
+          </section>
+          <div class="keywords">
+            <span>Keywords: </span>JavaScript, CSS, Html, Solo Project
+          </div>
+          <section class="main-section-content-preamble">
+            <p>???????</p>
+          </section>
+
+          <section class="main-section-content-body project-body">
+            <a href="#" target="_blank">
+              <div class="project-link-1">
+                <span>GitHub Repository</span>
+              </div></a
+            >
+            <div class="article-main-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <a href="#" target="_blank"
+              ><div class="project-link-2">
+                <span>Postman Documentation</span>
+              </div></a
+            >
           </section>
         </article>
       </div>
@@ -76,7 +214,9 @@
             onmouseout="hideMainNavText(this)"
           >
             <img class="icon" src="/svg/plant-swap.svg" alt="potted plant" />
-            <div class="icon-text" id="plant-swap-text">Plant Swap</div>
+            <div class="icon-text line-break-small" id="plant-swap-text">
+              Plant Swap
+            </div>
           </li>
 
           <li
@@ -86,7 +226,9 @@
             onmouseout="hideMainNavText(this)"
           >
             <img class="icon" src="/svg/air-bnb.svg" alt="house" />
-            <div class="icon-text" id="air-bnb-text">AirBnB Clone</div>
+            <div class="icon-text line-break" id="air-bnb-text">
+              AirBnB Clone
+            </div>
           </li>
 
           <li
@@ -96,7 +238,9 @@
             onmouseout="hideMainNavText(this)"
           >
             <img class="icon" src="/svg/cv-page.svg" alt="cv" />
-            <div class="icon-text" id="cv-page-text">Skills</div>
+            <div class="icon-text line-break" id="cv-page-text">
+              Personal Website
+            </div>
           </li>
         </ul>
       </nav>
