@@ -31,176 +31,299 @@
       <div class="main-section-content">
         <!--default article-->
         <article class="main-section-article default">
-          <section class="main-section-content-header">
-            <h2>PROJECTS</h2>
+          <section class="main-section-content-header default-header">
+            <h2>Projects</h2>
           </section>
-          <section class="main-section-content-preamble">
+          <section class="main-section-content-preamble default-preamble">
+            <p>Curious about my coding expertise?</p>
+            <p>I've got you covered!</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </section>
-
-          <section class="main-section-content-body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Browse three different example projects - including this website
+              project! - by clicking the circular icons.
             </p>
           </section>
         </article>
 
-        <!--articles accessed by the secondary nav menu-->
+        <!--articles accessed by the secondary nav menu--------------------------------------->
+
+        <!---PlantSwap article----------------------------------------------------------------->
+
         <article class="main-section-article" id="plant-swap-article">
           <section class="main-section-content-header">
-            <h2>Plant Swap</h2>
+            <h3>Plant Swap</h3>
           </section>
           <div class="keywords">
-            <span>Keywords: </span>Java, SQL, Spring Boot, PostgreSQL, Postman,
-            Docker, Solo Project
+            <span>Keywords: </span>Java, Maven, SQL, Spring Boot, PostgreSQL,
+            Postman, Docker, Front-End, Solo Project
           </div>
           <section class="main-section-content-preamble">
             <p>
-              This is a REST API using Spring boot, postgreSQL and Docker. The
-              application the backend part of a plant swap service with which
-              users can publish plant listings and acquire plant listed by other
-              users.
+              This project is a Plant Swap service where private individuals can
+              swap or buy plants from one another.
+            </p>
+            <p>
+              The application is coded in <strong>Java</strong> and is a
+              <strong>Spring boot REST API</strong> with
+              <strong>Maven</strong> using a
+              <strong>PostgreSQL</strong> database and run via a
+              <strong>Docker</strong> container. The application is backend-only
+              and is best experienced using the
+              <strong>Postman</strong> documentation linked in the article.
             </p>
           </section>
 
           <section class="main-section-content-body project-body">
+            <p>
+              The application has three main model classes: (1) User, (2) Plant
+              and (3) Transaction which all have CRUD implementation and for
+              which data are stored in three separate PostgreSQL database
+              tables. Each model class has a related service, repository and
+              controller class. The database has a
+              <strong> normalization of 3N </strong>, with very low data
+              redundancy and the application has very
+              <strong> robust validation and error handling </strong>
+            </p>
             <a href="#" target="_blank">
               <div class="project-link-1">
                 <span>GitHub Repository</span>
               </div></a
             >
-            <div class="article-main-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <a href="#" target="_blank"
-              ><div class="project-link-2">
-                <span>Postman Documentation</span>
-              </div></a
-            >
-          </section>
-        </article>
-
-        <article class="main-section-article" id="plant-swap-article">
-          <section class="main-section-content-header">
-            <h2>Plant Swap</h2>
-          </section>
-          <div class="keywords">
-            <span>Keywords: </span>Java, SQL, Spring Boot, PostgreSQL, Postman,
-            Docker, Solo Project
-          </div>
-          <section class="main-section-content-preamble">
             <p>
-              This is a REST API using Spring boot, postgreSQL and Docker. The
-              application the backend part of a plant swap service with which
-              users can publish plant listings and acquire plant listed by other
-              users.
+              The Plant Swap service allows for registration, update, deletion
+              of users (User class), plant listings (Plant class) and
+              purchase/swap requests (Transaction class). A plant listing must
+              either be for swap (and then have swap condition listed) or for
+              purchase (and then have a price). Transactions for plants that are
+              for purchase are accepted automatically, while transactions that
+              are swap offers must be accepted or rejected manually via API
+              end-points.
             </p>
-          </section>
-
-          <section class="main-section-content-body project-body">
+            <p>
+              The project has a very
+              <strong> robust validation </strong> implementation which checks
+              that all user input (RequestBodies and RequestParameters) is valid
+              and otherwise cast appropriate error messages. Use of
+              <strong> global error handling </strong> ensures that errors
+              caught and handled in uniform manner.
+            </p>
+            <p>
+              The User entity has a <strong> one-to-many </strong> relationship
+              to both the Plant entity (plant listing) and the Transaction
+              entity. Furthermore, the Plant has a one-to-many relationship with
+              Transaction, since a transaction request can be rejected, and it
+              should then be possible for another transaction to be made for
+              that same plant listing.
+            </p>
             <a href="#" target="_blank">
               <div class="project-link-1">
                 <span>GitHub Repository</span>
               </div></a
             >
-            <div class="article-main-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <a href="#" target="_blank"
-              ><div class="project-link-2">
-                <span>Postman Documentation</span>
-              </div></a
-            >
+            <p>
+              In general, the project has
+              <strong> delete on cascade </strong> for the database. However,
+              there are many method-checks for if a delete request is allowed.
+              For example, if a plant listing has a pending transaction request,
+              deletion of that plant is not allowed and attempts to delete it
+              will cast an error message informing the user that pending
+              transactions must be resolved before it can be deleted.
+            </p>
+
+            <p class="end-paragraph" >
+              Explore this project more via the Postman documentation and GitHub
+              Repository links in this article!
+            </p>
           </section>
         </article>
+
+        <!---AirBnB article----------------------------------------------------------------->
 
         <article class="main-section-article" id="air-bnb-article">
           <section class="main-section-content-header">
-            <h2>AirBnB Clone</h2>
+            <h3>AirBnB Clone</h3>
           </section>
           <div class="keywords">
-            <span>Keywords: </span>Java, NoSQL, Spring Boot, MongoDB Atlas,
-            Postman, Docker, Group Project, Agile Workflow
+            <span>Keywords: </span>Java, Maven, NoSQL, Spring Boot, Spring
+            Security, JWT tokens, MongoDB Atlas, Postman, Docker, Back-End,
+            Group Project, Agile Workflow
           </div>
           <section class="main-section-content-preamble">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              This project is a Living Space Rental service (named AirBnB Clone
+              - the magic is in the code, not the name!) where private
+              individuals can rent-out and rent accommodations from one another.
+              The application is coded in <strong>Java</strong> and is a
+              <strong>Spring boot REST API</strong> with
+              <strong>Spring Security</strong> implementation and
+              <strong>Maven</strong>. It uses <strong>MongoDB</strong> as a
+              database and run via a <strong>Docker</strong> container. The
+              application is backend-only and is best experienced using the
+              <strong>Postman</strong> documentation linked in the article. This
+              project is a group project coded with two other talented
+              individuals.
             </p>
           </section>
 
           <section class="main-section-content-body project-body">
+            <p>
+              This project is a Living Space Rental service (named AirBnB Clone
+              - the magic is in the code, not the name!) where private
+              individuals can rent-out and rent accommodations from one another.
+              The application is coded in <strong>Java</strong> and is a
+              <strong>Spring boot REST API</strong> with
+              <strong>Spring Security</strong> implementation and
+              <strong>Maven</strong>. It uses <strong>MongoDB</strong> as a
+              database and run via a <strong>Docker</strong> container. The
+              application is backend-only and is best experienced using the
+              <strong>Postman</strong> documentation linked in the article. This
+              project is a group project coded with two other talented
+              individuals.
+            </p>
             <a href="#" target="_blank">
               <div class="project-link-1">
                 <span>GitHub Repository</span>
               </div></a
             >
-            <div class="article-main-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
+
+            <p>
+              This application is modelled after AirBnB, and allows users to
+              publish and manage listings, make bookings and leave reviews. The
+              application has four main model classes (User, Listing, Booking,
+              Review) and uses <strong> DTOs </strong> to package and deliver
+              information between the controller classes and the service classes
+              (where the DTOs are mapped to and from the different model
+              classes). A user can own several listings, bookings and reviews,
+              and therefor has a <strong> one-to-many </strong> relationship to
+              all of these. Similarly, a listing can have many bookings and
+              reviews and therefor has a
+              <strong> one-to-many </strong> relationship to these.
+            </p>
+
+            <p>
+              Since the database used is a NoSQL database, the data is not
+              normalized and things such as username and listing title are
+              sometimes double stored in bookings or reviews, to allow for e.g.,
+              showing the username of the person leaving the review without
+              retrieving data from any source other than the review entity
+              itself. During development we used a
+              <strong> MongoDB Atlas cluster </strong> in order for the whole
+              team to work with the same database.
+            </p>
+
             <a href="#" target="_blank"
               ><div class="project-link-2">
                 <span>Postman Documentation</span>
               </div></a
             >
+
+            <p>
+              The application has a comprehensive Spring Security
+              implementation, which uses e.g., <strong>filter chains</strong>,
+              <strong>JWT tokens</strong>,
+              <strong>CORS configuration</strong> and
+              <strong>password authentication</strong>. The application has
+              end-point access regulation based on if the current user is logged
+              in and (if they are) what roles they have.
+              <strong> Non-logged in user </strong>has the
+              <strong> lowest access level </strong>, and can only browse the
+              listing in the database (along with associated reviews and host
+              profile), as well as register a new user or log in. A logged in
+              user with the <strong> role admin </strong> has the.
+              <strong> highest access level </strong> and can manage their own
+              profile, listings, bookings and reviews, as well as delete those
+              of other users.
+            </p>
+
+            <p>
+              The project has a very
+              <strong> robust validation </strong> implementation which checks
+              that all user input (RequestBodies and RequestParameters) is
+              valid. This is done both through the
+              <strong> @Valid annotation </strong> and through checks in the
+              service class methods. Use of
+              <strong> global error handling </strong> ensures that errors
+              caught and handled in uniform manner.
+            </p>
+
+            <p class="end-paragraph">
+              Explore this project more via the Postman documentation and GitHub
+              Repository links in this article!
+            </p>
           </section>
         </article>
 
+        <!---Personal website article----------------------------------------------------------------->
+
         <article class="main-section-article" id="cv-page-article">
           <section class="main-section-content-header">
-            <h2>Personal Website</h2>
+            <h3>Personal Website</h3>
           </section>
           <div class="keywords">
-            <span>Keywords: </span>JavaScript, CSS, Html, Solo Project
+            <span>Keywords: </span>JavaScript, CSS, Html, Responsive Design,
+            Front-end, Solo Project
           </div>
           <section class="main-section-content-preamble">
-            <p>???????</p>
+            <p>
+              This project is… well.. this! It is this very website that you are
+              on right now. The website is coded in <strong>html</strong>,
+              <strong>CSS</strong> and native <strong>JavaScript</strong>, and
+              implements <strong>responsive design</strong> through media
+              queries, JS functions and CSS hover effects.
+            </p>
           </section>
 
           <section class="main-section-content-body project-body">
+            <p>
+              This website is a front-end only application coded in html, CSS
+              and pure JavaScript. It has responsive design that adapts the
+              layout according to the view port screen, using
+              <strong>media queries</strong> for
+              <strong>three different minimum view port widths</strong>. It also
+              includes a contact form with validation and numerous cool
+              <strong> hover and button click effects</strong>.
+            </p>
             <a href="#" target="_blank">
               <div class="project-link-1">
                 <span>GitHub Repository</span>
               </div></a
             >
-            <div class="article-main-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
+            <p><strong class="bold">Why not try it for yourself? </strong></p>
+            <p>
+              Narrow down the window width and see the design change at
+              <strong> 900px, 575px and 400px</strong> break points. The break
+              points are set according where they need to be in order for the
+              layout to always remain pleasing and functional.
+            </p>
+            <p>
+              At 575px the secondary navigation menu (circular icon buttons)
+              moves to the top and the main menu (and secondary menu)
+              <strong>becomes fixed</strong> at its top positions even when
+              scrolling. At 400px the main menu splits the four options into two
+              rows. The secondary menu has hoover effects, which expand the
+              button to show informative text. This effect is done using both
+              CSS and JavaScript.
+            </p>
             <a href="#" target="_blank"
               ><div class="project-link-2">
                 <span>Postman Documentation</span>
               </div></a
             >
+            <p>
+              The contact form on the Contact page is sadly not functional as a
+              contact form (i.e., the message is not sent anywhere - as of
+              yet!), but it does have <strong>form validation</strong> through
+              JavaScript, which checks that the user has filled out all fields
+              before clicking submit.
+              <strong
+                >Try skipping a field and see what error message you
+                get!</strong
+              >
+            </p>
+
+            <p class="end-paragraph">
+              Explore this project more via the GitHub Repository link in this
+              article!
+            </p>
           </section>
         </article>
       </div>
