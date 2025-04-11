@@ -15,10 +15,6 @@ FONT IMPORT AND ANIMATIONS -----------------------------------------------------
   }
 }
 
-/**/
-@keyframes blink {
-}
-
 /*
 CSS RESET SECTION -----------------------------------------------------------------------------------------------------------------------------
 Basic/minimal CSS-reset
@@ -43,6 +39,8 @@ html {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  background-color: #d3d9d4;
+  color: #1a2126;
 }
 
 /*
@@ -56,41 +54,41 @@ textarea,
 button {
   font-family: "Hind", sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.6px;
   line-height: 1.5rem;
 }
 
 h1 {
-  color: white;
-  font-size: 20px;
-  font-weight: 100;
+  color: #d3d9d4;
+  font-size: 25px;
+  font-weight: 50;
 }
 
 h2 {
+  color: #14283c;
   font-family: "Montserrat", sans-serif;
   font-size: 50px;
-  padding: 1rem 0;
+  margin-bottom: 2rem;
   letter-spacing: 8px;
-  text-transform: uppercase;
 }
 
 .home-page {
-  text-transform: unset;
   letter-spacing: 6px;
 }
 
 h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
-  padding: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 h4 {
-  font-size: 22px;
-  font-weight: 100;
-  border-bottom: 2px solid black;
+  font-size: 26px;
+  font-weight: 200;
+  border-bottom: 2px solid #124e66;
   margin-bottom: 1rem;
+  color: #124e66;
 }
 
 h5 {
@@ -104,8 +102,8 @@ p {
   transition: all 0.5s ease;
 }
 
-/*increased margin between paragraphs*/
-p {
+/*increased between paragraphs*/
+p + p {
   margin-bottom: 1rem;
 }
 
@@ -115,10 +113,10 @@ ul {
   list-style: none;
 }
 
-/*remove default styling of links, text is set to white*/
+/*remove default styling of links, text is set to rgb(224, 227, 249)*/
 a {
   text-decoration: none;
-  color: white;
+  color: #d3d9d4;
 }
 
 /*
@@ -131,23 +129,31 @@ header,
 main,
 footer {
   display: flex;
-  background-color: lightslategray;
-  margin: 1rem;
   padding: 1rem;
   gap: 1rem;
 }
 
 /*header and footer have fixed heights*/
 header {
-  height: 6rem;
+  margin: 0;
+  padding: 1.5rem;
+  height: 6.5rem;
+  background-color: #2e3944;
 }
 
 main {
   animation: fadeIn 0.5s;
+  margin: 1rem;
+  min-height: calc(100vh - 11.5rem);
 }
 
 footer {
+  margin: 0;
+  padding: 1rem 1.5rem;
   height: 3rem;
+  background-color: #2e3944;
+  color: #d3d9d4;
+  justify-content: right;
 }
 
 /*
@@ -156,34 +162,35 @@ styling of elements within the <header> section
 */
 
 .header-name {
-  background-color: gray;
   display: flex;
   width: 8rem;
   align-items: center;
   justify-content: center;
-  outline: 1px solid white;
 }
 
 .header-nav {
-  background-color: blue;
   flex-grow: 1;
+  border-left: 2px solid #d3d9d4;
+  border-right: 2px solid #d3d9d4;
 }
 
 .header-nav-ul {
   display: flex;
-  background-color: grey;
   justify-content: space-between;
-  padding: 0 4vw;
+  padding: 0 5vw;
   align-items: center;
   height: 100%;
 }
 
 .header-nav-link a {
   height: 100%;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  padding: 0.4rem 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 
 .current a {
@@ -191,8 +198,8 @@ styling of elements within the <header> section
 }
 
 .header-nav-link:hover a {
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 1px solid #d3d9d4;
+  border-bottom: 1px solid #d3d9d4;
 }
 
 /*
@@ -216,8 +223,9 @@ Styling of secondary navigation menu
 /*holds space for the sticky nav-ul div*/
 .main-section-nav {
   display: flex;
-  background-color: blue;
-  width: 20%;
+  position: relative;
+  left: 1.5rem;
+  width: 21%;
   min-width: 14rem;
   align-self: stretch;
 }
@@ -225,19 +233,19 @@ Styling of secondary navigation menu
 .main-section-nav-ul {
   display: flex;
   flex-direction: column;
-  background-color: gray;
-  height: calc(100vh - 10rem);
+  height: calc(100vh - 14rem);
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
   position: sticky;
   top: 10vh;
   min-height: 20rem;
+  border-left: 2px solid #2e3944;
 }
 
 .main-section-nav-link {
   display: flex;
-  background-color: black;
+  background-color: #2e3944;
   align-items: center;
   height: 4rem;
   width: 4rem;
@@ -257,7 +265,7 @@ Styling of secondary navigation menu
   font-size: 20px;
   font-weight: 500;
   text-align: center;
-  color: white;
+  color: #d3d9d4;
   white-space: nowrap;
   animation: fadeIn 0.5s;
 }
@@ -284,10 +292,9 @@ General styling of main content area
 .main-section-content {
   display: flex;
   flex-direction: column;
-  background-color: gray;
   padding: 8vh 6vw;
   flex-grow: 1;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .main-section-article {
@@ -298,7 +305,6 @@ General styling of main content area
 }
 
 .main-section-content-preamble p {
-  background-color: slategray;
   font-weight: 600;
   font-size: 17px;
   line-height: 1.6rem;
@@ -310,20 +316,18 @@ General styling of main content area
   line-height: 1.6rem;
 }
 
-.main-section-content-image {
-  background-color: slategray;
-  height: 6rem;
-  float: right;
-}
-
-.main-section-content-body {
-  background-color: slategray;
-}
-
 .main-section-content-body strong {
   letter-spacing: 0.8px;
   font-weight: 600;
-  color: rgb(33, 30, 136);
+  color: #256875;
+}
+
+.main-section-content-body .bold,
+.main-section-content-body .end-paragraph {
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  color: #000000;
+  font-size: 17px;
 }
 
 .default {
@@ -342,30 +346,27 @@ General styling of main content area
   margin-top: 2rem;
 }
 
-.end-paragraph {
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
 /*
 2B. Main section content: PROJECT PAGE SPECIFIC ----------------------------------------------------------------------------------------------
 Styling of elements specific to the project page of the website
 */
 
 .keywords {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 2px solid #124e66;
+  border-bottom: 2px solid #124e66;
   font-size: 18px;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   padding: 0.5rem 0;
   letter-spacing: 3px;
   text-align: justify;
   line-height: 25px;
+  color: black;
+  color: #124e66;
 }
 
 .keywords span {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .project-body {
@@ -373,17 +374,20 @@ Styling of elements specific to the project page of the website
   display: block;
 }
 
+.project-body p {
+  margin-bottom: 1rem;
+}
+
 .project-link-1,
 .project-link-2 {
   width: 8rem;
   display: flex;
   background-repeat: no-repeat;
-  background-color: black;
   padding: 1rem;
-  box-shadow: 5px 5px 10px 0 white inset, -5px -5px 10px 0 white inset;
   position: relative;
   top: 0.3rem;
   width: 25rem;
+  border-radius: 15px;
 }
 
 .project-link-1 {
@@ -401,15 +405,14 @@ Styling of elements specific to the project page of the website
   height: 11rem;
   margin: 0 0 1rem 1rem;
   justify-content: flex-end;
-  align-items: flex-end;
 }
 
 .project-link-1 span,
 .project-link-2 span {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 25px;
   text-shadow: 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black,
-    0 0 30px black, 0 0 30px black, 0 0 30px black, 0 0 30px black;
+    0 0 30px black, 0 0 30px black, 0 0 30px black, 0 0 30px #2e3944;
   padding: 1rem;
 }
 
@@ -476,7 +479,6 @@ Styling of elements specific to the CV page of the website
 }
 
 .skills-container {
-  background-color: aqua;
   padding: 1rem;
   width: 48%;
   margin: 1%;
@@ -503,7 +505,7 @@ Styling of elements specific to the contact page of the website
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border: 1.5px solid black;
+  border: 1.5px solid #2e3944;
 }
 
 .contact-form label,
@@ -528,8 +530,8 @@ Styling of elements specific to the contact page of the website
   height: 1.8rem;
   width: 5rem;
   margin: 8px 0;
-  background-color: black;
-  color: white;
+  background-color: #2e3944;
+  color: #d3d9d4;
 }
 
 .error {
@@ -651,14 +653,46 @@ Adaptation for wide phone screens*/
   header {
     flex-direction: column;
     position: sticky;
-    top: 1rem;
+    top: 0;
     margin-bottom: 0;
+    padding: 0;
   }
 
   .header-name {
     width: 100%;
     justify-content: center;
-    height: 1.8rem;
+    height: 1.4rem;
+    padding: 1.5rem 0 0.5rem 0;
+  }
+
+  .header-nav {
+    border: unset;
+  }
+
+  .header-nav-ul {
+    border-top: 1px solid #d3d9d4;
+    padding-top: 0.8rem;
+    justify-content: space-between;
+    margin: 0 5vw;
+    padding: 0;
+    align-items: center;
+  }
+
+  .header-nav-link a {
+    border-top: unset;
+    border-bottom: unset;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    padding: 0 0.5rem;
+    vertical-align: middle;
+    font-size: 20px;
+  }
+
+  .header-nav-link:hover a {
+    border-top: unset;
+    border-bottom: unset;
+    border-right: 1px solid #d3d9d4;
+    border-left: 1px solid #d3d9d4;
   }
 
   h1 {
@@ -672,38 +706,34 @@ Adaptation for wide phone screens*/
     letter-spacing: 5px;
   }
 
-  .default-preamble p {
-    text-align: center;
-  }
-
-  .header-nav-link a {
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    margin-top: 0.5rem;
-  }
-
   main {
     flex-direction: column-reverse;
-    margin-top: 0;
+    margin: 0;
+    padding-top: 0;
+    margin-bottom: 1rem;
   }
 
   .main-section-nav {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 4rem;
+    height: 5rem;
     position: sticky;
-    top: 7.6rem;
+    top: 6.5rem;
+    margin-top: 0;
+    padding: 0 5vw;
+    background-color: #d3d9d4;
   }
 
   .main-section-nav-ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5vw;
     height: 100%;
-    min-height: 0;
+    min-height: unset;
+    border-left: unset;
+    border-bottom: 2px solid #2e3944;
+    align-items: center;
   }
 
   .main-section-nav-link {
@@ -719,10 +749,6 @@ Adaptation for wide phone screens*/
     width: 8rem;
   }
 
-  .main-section-content {
-    padding: 2rem;
-  }
-
   .icon {
     height: 2.3rem;
   }
@@ -731,8 +757,20 @@ Adaptation for wide phone screens*/
     width: 4.8rem;
   }
 
+  .main-section-content {
+    padding: 2rem;
+  }
+
+  .default-preamble p {
+    text-align: center;
+  }
+
   .project-link-1 {
     height: 10rem;
+  }
+
+  .main-section-content {
+    margin-top: 1rem;
   }
 }
 /*
