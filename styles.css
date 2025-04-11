@@ -538,6 +538,7 @@ Styling of elements specific to the contact page of the website
   padding-left: 1rem;
   color: darkred;
   font-style: italic;
+  display: none;
 }
 
 .no-email {
