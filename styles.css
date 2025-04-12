@@ -304,10 +304,6 @@ General styling of main content area
   animation: fadeIn 1s;
 }
 
-.main-section-content-header {
-  margin-bottom: 1rem;
-}
-
 .main-section-content-preamble p {
   font-weight: 600;
   font-size: 17px;
@@ -401,14 +397,14 @@ Styling of elements specific to the project page of the website
 .project-link-1 {
   margin: 0 1rem 1rem 0;
   float: left;
-  background-image: url(svg/plantgithub.png);
+  background-image: url(assets/svg/plantgithub.png);
   background-size: 40rem 13rem;
   height: 12rem;
 }
 
 .project-link-2 {
   float: right;
-  background-image: url(svg/plantgithub.png);
+  background-image: url(assets/svg/plantgithub.png);
   background-size: 40rem 13rem;
   height: 11rem;
   margin: 0 0 1rem 1rem;
@@ -811,7 +807,8 @@ Adaptation for slimmer phone screens*/
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 4.2rem;
+    height: 5.3rem;
+    padding: 0.8rem 0;
   }
 
   .header-nav-link {

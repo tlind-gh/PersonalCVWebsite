@@ -70,15 +70,17 @@ function hideMainNavText(obj) {
 }
 
 //contact form validation, show error messages (non-valid input) or response text (valid input)
-contactForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-  if (validateForm()) {
-    formResponse.style.display = "block";
-    clearForm();
-  } else {
-    formResponse.style.display = "none";
-  }
-});
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (validateForm()) {
+      formResponse.style.display = "block";
+      clearForm();
+    } else {
+      formResponse.style.display = "none";
+    }
+  });
+}
 
 //clear fields if the form was filled out correctly
 function clearForm() {
