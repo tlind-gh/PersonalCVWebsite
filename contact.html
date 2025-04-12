@@ -29,72 +29,76 @@
     <!--main section with a contact form and links-->
     <main>
       <div class="main-section-content">
-        <div class="main-section-content-header">
-          <h2>Contact</h2>
-        </div>
-        <section class="main-section-content-preamble">
-          <p>Want to get in touch? Fill out the contact form below!</p>
-          <br />
-          <p>
-            Want to get to know me even better? Check out my GitHub and LinkedIn
-            via the menu to the right!
-          </p>
-        </section>
-        <section class="main-section-content-body">
-          <p class="contact-note">
-            The contact form and the email link are not yet implemented fully.
-            However, feel free to try out the contact form validation by
-            submitting without filling out all the fields!
-          </p>
-        </section>
+        <article class="main-section-article default">
+          <div class="main-section-content-header default-header">
+            <h2>Contact</h2>
+          </div>
+          <section class="main-section-content-preamble default-preamble">
+            <p>Want to get in touch? Fill out the contact form below!</p>
+            <br />
+            <p>
+              Want to get to know me even better? Check out my GitHub and
+              LinkedIn via the menu to the right!
+            </p>
+          </section>
+          <section class="main-section-content-body">
+            <p class="contact-note">
+              The contact form and the email link are not yet implemented fully.
+              However, feel free to try out the contact form validation by
+              submitting without filling out all the fields!
+            </p>
+          </section>
 
-        <form class="contact-form" id="contact-form">
-          <div>
+          <form class="contact-form" id="contact-form">
             <div>
-              <label for="name1">Name</label
-              ><span class="error" id="name1-error">Name cannot be empty</span>
+              <div>
+                <label for="name1">Name</label
+                ><span class="error" id="name1-error"
+                  >Name cannot be empty</span
+                >
+              </div>
+              <input
+                type="text"
+                name="name1"
+                placeholder="write your name here"
+              />
             </div>
-            <input
-              type="text"
-              name="name1"
-              placeholder="write your name here"
-            />
-          </div>
 
-          <div>
-            <label for="email">Email</label
-            ><span class="error" id="email-error">Email cannot be empty</span>
-            <input
-              type="email"
-              name="email"
-              placeholder="write your email here"
-            />
-          </div>
+            <div>
+              <label for="email">Email</label
+              ><span class="error" id="email-error">Email cannot be empty</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="write your email here"
+              />
+            </div>
 
-          <div>
-            <label for="subject">Subject</label
-            ><span class="error" id="subject-error"
-              >Subject cannot be empty</span
-            >
-            <input
-              type="subject"
-              name="subject"
-              placeholder="write your subject here"
-            />
-          </div>
+            <div>
+              <label for="subject">Subject</label
+              ><span class="error" id="subject-error"
+                >Subject cannot be empty</span
+              >
+              <input
+                type="subject"
+                name="subject"
+                placeholder="write your subject here"
+              />
+            </div>
 
-          <div>
-            <label for="message">Message</label
-            ><span class="error" id="message-error"
-              >Message cannot be empty</span
-            >
-            <textarea rows="5" name="message" required> </textarea>
-          </div>
+            <div>
+              <label for="message">Message</label
+              ><span class="error" id="message-error"
+                >Message cannot be empty</span
+              >
+              <textarea rows="5" name="message" required> </textarea>
+            </div>
 
-          <button type="submit" class="submit-button" id="submit-button">
-            Submit
-          </button>
-        </form>
+            <button type="submit" class="submit-button" id="submit-button">
+              Submit
+            </button>
+          </form>
+        </article>
       </div>
 
       <!--main section nav-->

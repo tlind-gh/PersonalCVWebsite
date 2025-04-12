@@ -69,12 +69,7 @@ h2 {
   color: #14283c;
   font-family: "Montserrat", sans-serif;
   font-size: 50px;
-  margin-bottom: 2rem;
   letter-spacing: 8px;
-}
-
-.home-page {
-  letter-spacing: 6px;
 }
 
 h3 {
@@ -225,8 +220,7 @@ Styling of secondary navigation menu
   display: flex;
   position: relative;
   left: 1.5rem;
-  width: 21%;
-  min-width: 14rem;
+  min-width: 16rem;
   align-self: stretch;
 }
 
@@ -284,6 +278,10 @@ Styling of secondary navigation menu
   width: 11rem;
 }
 
+.home-page-title-small-div {
+  display: none;
+}
+
 /*
 2a. Main section content: GENERAL ---------------------------------------------------------
 General styling of main content area
@@ -304,10 +302,15 @@ General styling of main content area
   animation: fadeIn 1s;
 }
 
+.main-section-content-preamble {
+  margin-top: 2rem;
+}
+
 .main-section-content-preamble p {
   font-weight: 600;
   font-size: 17px;
   line-height: 1.6rem;
+  text-align: left;
 }
 
 .main-section-content-preamble strong {
@@ -339,7 +342,6 @@ General styling of main content area
   line-height: 2rem;
   font-size: 18px;
   font-weight: 500;
-  text-align: left;
 }
 
 .default-preamble p + p {
@@ -611,7 +613,7 @@ Adaptation for slimmer window width on desktop or ipad*/
   }
 
   .main-section-content {
-    padding: 6vh 4vw;
+    padding: 2rem 4vw;
   }
 
   .skills-container {
@@ -737,6 +739,11 @@ Adaptation for wide phone screens*/
     align-items: center;
   }
 
+  .home-page-title-small {
+    width: 100%;
+    align-self: center;
+  }
+
   .main-section-nav-link {
     height: 3.1rem;
     width: 3.1rem;
@@ -772,6 +779,14 @@ Adaptation for wide phone screens*/
 
   .main-section-content {
     margin-top: 1rem;
+  }
+
+  .home-page-title {
+    display: none;
+  }
+
+  .home-page-content {
+    padding-top: 0;
   }
 }
 /*
