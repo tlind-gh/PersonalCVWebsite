@@ -340,6 +340,10 @@ General styling of main content area
   animation: none;
 }
 
+.default-preamble {
+  margin-top: 0;
+}
+
 .default-preamble p {
   line-height: 2rem;
   font-size: 18px;
@@ -537,8 +541,14 @@ Styling of elements specific to the contact page of the website
 
 .error {
   padding-left: 1rem;
-  color: darkred;
+  color: rgb(210, 3, 3);
   font-style: italic;
+  display: none;
+}
+
+.form-response {
+  font-weight: 500;
+  font-size: 18px;
   display: none;
 }
 

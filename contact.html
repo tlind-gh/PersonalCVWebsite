@@ -35,14 +35,13 @@
           </div>
           <section class="main-section-content-preamble default-preamble">
             <p>Want to get in touch? Fill out the contact form below!</p>
-            <br />
             <p>
               Want to get to know me even better? Check out my GitHub and
               LinkedIn via the menu to the right!
             </p>
           </section>
           <section class="main-section-content-body">
-            <p class="contact-note">
+            <p>
               The contact form and the email link are not yet implemented fully.
               However, feel free to try out the contact form validation by
               submitting without filling out all the fields!
@@ -52,24 +51,18 @@
           <form class="contact-form" id="contact-form">
             <div>
               <div>
-                <label for="name1">Name</label
-                ><span class="error" id="name1-error"
-                  >Name cannot be empty</span
-                >
+                <label for="name">Name</label
+                ><span class="error" id="name-error">Name cannot be empty</span>
               </div>
-              <input
-                type="text"
-                name="name1"
-                placeholder="write your name here"
-              />
+              <input type="text" id="name" placeholder="write your name here" />
             </div>
 
             <div>
               <label for="email">Email</label
               ><span class="error" id="email-error">Email cannot be empty</span>
               <input
-                type="email"
-                name="email"
+                type="text"
+                id="email"
                 placeholder="write your email here"
               />
             </div>
@@ -80,8 +73,8 @@
                 >Subject cannot be empty</span
               >
               <input
-                type="subject"
-                name="subject"
+                type="text"
+                id="subject"
                 placeholder="write your subject here"
               />
             </div>
@@ -91,12 +84,22 @@
               ><span class="error" id="message-error"
                 >Message cannot be empty</span
               >
-              <textarea rows="5" name="message" required> </textarea>
+              <textarea
+                rows="5"
+                id="message"
+                placeholder="write your message here"
+              >
+              </textarea>
             </div>
 
             <button type="submit" class="submit-button" id="submit-button">
               Submit
             </button>
+            <span class="form-response" id="form-response"
+              >Congratulation! You passed the form validation test.
+              Unfortunatley this message was not sent anywhere, but feel free to
+              contact me via LinkedIn!</span
+            >
           </form>
         </article>
       </div>
