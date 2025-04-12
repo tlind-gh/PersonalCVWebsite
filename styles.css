@@ -70,20 +70,21 @@ h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 50px;
   letter-spacing: 8px;
+  line-height: 55px;
 }
 
 h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
-  margin-bottom: 1rem;
+  line-height: 45px;
 }
 
 h4 {
   font-size: 26px;
   font-weight: 200;
-  border-bottom: 2px solid #124e66;
+  border-bottom: 2px solid #015e71;
   margin-bottom: 1rem;
-  color: #124e66;
+  color: #015e71;
 }
 
 h5 {
@@ -134,6 +135,7 @@ header {
   padding: 1.5rem;
   height: 6.5rem;
   background-color: #2e3944;
+  z-index: 5;
 }
 
 main {
@@ -302,8 +304,8 @@ General styling of main content area
   animation: fadeIn 1s;
 }
 
-.main-section-content-preamble {
-  margin-top: 2rem;
+.main-section-content-header {
+  margin-bottom: 1rem;
 }
 
 .main-section-content-preamble p {
@@ -322,7 +324,7 @@ General styling of main content area
 .main-section-content-body strong {
   letter-spacing: 0.8px;
   font-weight: 600;
-  color: #256875;
+  color: #015e71;
 }
 
 .main-section-content-body .bold,
@@ -342,6 +344,7 @@ General styling of main content area
   line-height: 2rem;
   font-size: 18px;
   font-weight: 500;
+  margin-top: 1rem;
 }
 
 .default-preamble p + p {
@@ -354,8 +357,8 @@ Styling of elements specific to the project page of the website
 */
 
 .keywords {
-  border-top: 2px solid #124e66;
-  border-bottom: 2px solid #124e66;
+  border-top: 2px solid #015e71;
+  border-bottom: 2px solid #015e71;
   font-size: 18px;
   font-style: italic;
   font-weight: 400;
@@ -363,8 +366,7 @@ Styling of elements specific to the project page of the website
   letter-spacing: 3px;
   text-align: justify;
   line-height: 25px;
-  color: black;
-  color: #124e66;
+  color: #015e71;
 }
 
 .keywords span {
@@ -423,9 +425,8 @@ Styling of elements specific to the project page of the website
 Styling of elements specific to the CV page of the website
 */
 
-.cv-section {
-  margin-bottom: 2rem;
-  border-bottom: 1px solid gray;
+.cv-section + .cv-section {
+  margin-bottom: 3rem;
 }
 
 .cv-item {
@@ -474,6 +475,7 @@ Styling of elements specific to the CV page of the website
   flex-wrap: wrap;
   width: 100%;
   height: 35rem;
+  gap: 2rem;
 }
 
 .skills-article:first-child {
@@ -481,10 +483,7 @@ Styling of elements specific to the CV page of the website
 }
 
 .skills-container {
-  padding: 1rem;
   width: 48%;
-  margin: 1%;
-  margin-bottom: 3rem;
 }
 
 /*
