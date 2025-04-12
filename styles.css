@@ -809,6 +809,7 @@ Adaptation for slimmer phone screens*/
     flex-wrap: wrap;
     height: 5.3rem;
     padding: 0.8rem 0;
+    top: 8rem;
   }
 
   .header-nav-link {
