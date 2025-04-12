@@ -415,6 +415,7 @@ Styling of elements specific to the project page of the website
 .project-link-2 span {
   font-weight: 700;
   font-size: 25px;
+  line-height: 30px;
   text-shadow: 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black,
     0 0 30px black, 0 0 30px black, 0 0 30px black, 0 0 30px #2e3944;
   padding: 1rem;
