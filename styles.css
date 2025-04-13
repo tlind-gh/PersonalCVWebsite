@@ -224,6 +224,7 @@ Styling of secondary navigation menu
   left: 1.5rem;
   min-width: 16rem;
   align-self: stretch;
+  z-index: 4;
 }
 
 .main-section-nav-ul {
@@ -382,43 +383,42 @@ Styling of elements specific to the project page of the website
   margin-bottom: 1rem;
 }
 
-.project-link-1,
-.project-link-2 {
+.project-link {
   width: 8rem;
   display: flex;
   background-repeat: no-repeat;
-  padding: 1rem;
   position: relative;
   top: 0.3rem;
   width: 25rem;
   border-radius: 15px;
+  overflow: hidden;
 }
 
-.project-link-1 {
+.project-link-github {
   margin: 0 1rem 1rem 0;
   float: left;
-  background-image: url(assets/svg/plantgithub.png);
-  background-size: 40rem 13rem;
   height: 12rem;
 }
 
-.project-link-2 {
+.project-link-postman {
   float: right;
-  background-image: url(assets/svg/plantgithub.png);
-  background-size: 40rem 13rem;
   height: 11rem;
   margin: 0 0 1rem 1rem;
-  justify-content: flex-end;
+  justify-content: right;
 }
 
-.project-link-1 span,
-.project-link-2 span {
+.project-link span {
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
   text-shadow: 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black,
     0 0 30px black, 0 0 30px black, 0 0 30px black, 0 0 30px #2e3944;
-  padding: 1rem;
+  margin: 2rem;
+  z-index: 1;
+}
+
+.project-image {
+  position: absolute;
 }
 
 /*
@@ -635,11 +635,14 @@ Adaptation for slimmer window width on desktop or ipad*/
     flex-direction: column;
   }
 
-  .project-link-1,
-  .project-link-2 {
+  .project-link {
     width: 100%;
     margin-top: -0.3rem;
     margin-bottom: 1.3rem;
+  }
+
+  .project-link-postman {
+    justify-content: unset;
   }
 
   .line-break-small {
@@ -777,10 +780,6 @@ Adaptation for wide phone screens*/
 
   .default-preamble p {
     text-align: center;
-  }
-
-  .project-link-1 {
-    height: 10rem;
   }
 
   .main-section-content {
