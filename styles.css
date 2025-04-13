@@ -40,7 +40,14 @@ html {
   width: 100%;
   overflow-x: hidden;
   background-color: #d3d9d4;
-  color: #1a2126;
+}
+
+/*remove deafult textfields and button outlines*/
+input,
+textarea,
+button {
+  border: none;
+  outline: none;
 }
 
 /*
@@ -49,7 +56,8 @@ general font styling for body and different heading, paragraph etc. elements. Ov
 */
 
 /*input, textarea and button added here as well, otherwise they retained their default styling*/
-body, input,
+body,
+input,
 textarea,
 button {
   font-family: "Hind", sans-serif;
@@ -57,14 +65,8 @@ button {
   font-size: 16px;
   letter-spacing: 0.6px;
   line-height: 1.5rem;
+  color: #1a2126;
 }
-
-input,
-textarea, button {
-  outline: none;
-}
-
-
 
 h1 {
   color: #d3d9d4;
@@ -345,7 +347,7 @@ General styling of main content area
 }
 
 .default-preamble {
-  margin-top: 0;
+  margin: 0;
 }
 
 .default-preamble p {
@@ -411,7 +413,6 @@ Styling of elements specific to the project page of the website
   float: right;
   height: 11rem;
   margin: 0 0 1rem 1rem;
-  justify-content: right;
 }
 
 .project-link span {
@@ -422,6 +423,11 @@ Styling of elements specific to the project page of the website
     0 0 30px black, 0 0 30px black, 0 0 30px black, 0 0 30px #2e3944;
   margin: 2rem;
   z-index: 1;
+}
+
+.project-link-postman span {
+  align-self: flex-end;
+  margin-left: 4.6rem;
 }
 
 .project-image {
@@ -509,7 +515,9 @@ Styling of elements specific to the contact page of the website
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 2px;
+  padding: 5px;
+  border: 1px solid #2e3944;
+  resize: none;
 }
 
 .contact-form input:focus,
@@ -517,18 +525,13 @@ Styling of elements specific to the contact page of the website
   border: 1.5px solid #2e3944;
 }
 
-.contact-form label,
-.contact-form button {
+.contact-form label {
   font-weight: 500;
   font-size: 17px;
 }
 
 .contact-form input {
   height: 1.8rem;
-  font-family: "Hind", sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-  letter-spacing: 0.5px;
 }
 
 .contact-form textarea {
@@ -536,11 +539,16 @@ Styling of elements specific to the contact page of the website
 }
 
 .contact-form button {
-  height: 1.8rem;
-  width: 5rem;
-  margin: 8px 0;
+  height: 2rem;
+  width: 6.5rem;
+  margin: 5px 0;
+  border-radius: 0.5rem;
   background-color: #2e3944;
   color: #d3d9d4;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 
 .error {
@@ -648,8 +656,9 @@ Adaptation for slimmer window width on desktop or ipad*/
     margin-bottom: 1.3rem;
   }
 
-  .project-link-postman {
-    justify-content: unset;
+  .project-link-postman span {
+    align-self: unset;
+    margin-left: 2rem;
   }
 
   .line-break-small {
