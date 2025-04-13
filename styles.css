@@ -48,8 +48,8 @@ GENERAL TEXT STYLING  ----------------------------------------------------------
 general font styling for body and different heading, paragraph etc. elements. Overridden in later sections when needed
 */
 
-/*textarea and button added here as well, otherwise they retained their default styling*/
-body,
+/*input, textarea and button added here as well, otherwise they retained their default styling*/
+body, input,
 textarea,
 button {
   font-family: "Hind", sans-serif;
@@ -58,6 +58,13 @@ button {
   letter-spacing: 0.6px;
   line-height: 1.5rem;
 }
+
+input,
+textarea, button {
+  outline: none;
+}
+
+
 
 h1 {
   color: #d3d9d4;
