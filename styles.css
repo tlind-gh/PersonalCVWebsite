@@ -321,12 +321,6 @@ General styling of main content area and home page (index.html) styling
   text-align: left;
 }
 
-.main-section-content-preamble strong {
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 1.6rem;
-}
-
 .main-section-content-body strong {
   letter-spacing: 0.8px;
   font-weight: 600;
@@ -846,7 +840,9 @@ Adaptation for wide phone screens*/
     margin-top: 1rem;
   }
 
-  .default-preamble p {
+  .default-preamble p,
+  .contact-preamble p,
+  .contact-body p {
     text-align: center;
   }
 
