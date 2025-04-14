@@ -50,6 +50,7 @@ function mainContentArticleChange(obj) {
     article.style.display = "none";
   });
   document.getElementById(obj.id + "-article").style.display = "flex";
+  document.body.scrollTo(0, 0);
 }
 
 /*FUNCTIONS CALLED BY MOUSEOVER AND MOUSEOUT ---------------------------------------------------------
@@ -117,7 +118,3 @@ function validateField(obj) {
   }
   return isValidField;
 }
-
-/**/
-
-/*contact form validation*/
