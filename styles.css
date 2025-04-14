@@ -794,7 +794,7 @@ Adaptation for wide phone screens*/
     position: sticky;
     top: 6.5rem;
     margin-top: 0;
-    padding: 0 5vw;
+    padding: 0 3vw;
     background-color: #d3d9d4;
   }
 
@@ -803,6 +803,7 @@ Adaptation for wide phone screens*/
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    padding: 0 2vw;
     min-height: unset;
     border-left: unset;
     border-bottom: 2px solid #2e3944;
