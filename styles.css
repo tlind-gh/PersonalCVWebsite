@@ -296,7 +296,7 @@ Styling of secondary navigation menu
 
 /*
 2a. Main section content: GENERAL ---------------------------------------------------------
-General styling of main content area
+General styling of main content area and home page (index.html) styling
 */
 
 .main-section-content {
@@ -359,6 +359,38 @@ General styling of main content area
 
 .default-preamble p + p {
   margin-top: 2rem;
+}
+
+.home-page-content {
+  width: 100%;
+  padding: 4vh 6vw;
+}
+
+.home-page-title {
+  margin-bottom: 3rem;
+}
+
+.home-page-article {
+  width: 100%;
+  display: block;
+}
+
+.home-page-image {
+  background-image: url(assets/png/homepageimage.png);
+  background-size: 100%;
+  background-repeat: none;
+  height: 31rem;
+  width: 24rem;
+  border-radius: 2rem;
+  float: left;
+  margin: 0 2rem 1rem 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.home-page-image-text {
+  display: none;
 }
 
 /*
@@ -629,12 +661,31 @@ Adaptation for slimmer window width on desktop or ipad*/
     font-size: 16px;
   }
 
-  .cv-item-header {
-    font-size: 17px;
-  }
-
   .main-section-content {
     padding: 2rem 4vw;
+  }
+
+  .home-page-title {
+    display: none;
+  }
+
+  .home-page-image {
+    height: 28rem;
+    width: 20rem;
+  }
+
+  .home-page-image-text {
+    position: relative;
+    left: 2px;
+    font-size: 46px;
+    display: flex;
+    color: #14283c;
+    text-shadow: 0 0 10px #d3d9d4, 0 0 10px #d3d9d4, 0 0 10px #d3d9d4,
+      0 0 10px #d3d9d4;
+  }
+
+  .cv-item-header {
+    font-size: 17px;
   }
 
   .skills-container {
@@ -764,11 +815,6 @@ Adaptation for wide phone screens*/
     align-items: center;
   }
 
-  .home-page-title-small {
-    width: 100%;
-    align-self: center;
-  }
-
   .main-section-nav-link {
     height: 3.1rem;
     width: 3.1rem;
@@ -790,24 +836,36 @@ Adaptation for wide phone screens*/
     width: 4.8rem;
   }
 
+  .home-page-title-small {
+    width: 100%;
+    align-self: center;
+  }
+
   .main-section-content {
     padding: 2rem;
+    margin-top: 1rem;
   }
 
   .default-preamble p {
     text-align: center;
   }
 
-  .main-section-content {
-    margin-top: 1rem;
-  }
-
-  .home-page-title {
-    display: none;
-  }
-
   .home-page-content {
     padding-top: 0;
+  }
+
+  .home-page-preamble p {
+    font-size: 17px;
+  }
+
+  .home-page-image {
+    width: 100%;
+    height: 28rem;
+    margin-bottom: 2rem;
+  }
+
+  .home-page-image-text {
+    display: none;
   }
 }
 /*
@@ -835,5 +893,10 @@ Adaptation for slimmer phone screens*/
 
   .main-section-nav {
     top: 8rem;
+  }
+
+  .home-page-image {
+    width: 100%;
+    height: 20rem;
   }
 }
