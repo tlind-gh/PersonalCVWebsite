@@ -25,8 +25,10 @@ mainNavSelection(skillsButton);
 function mainNavSelection(obj) {
   if (obj) {
     obj.onclick = function () {
-      buttonClickEffect(obj);
-      mainContentArticleChange(obj);
+      if (!obj.classList.contains("clicked")) {
+        buttonClickEffect(obj);
+        mainContentArticleChange(obj);
+      }
     };
   }
 }
