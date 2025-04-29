@@ -510,19 +510,22 @@ Styling of elements specific to the CV page of the website
 
 .skills-article {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 35rem;
   gap: 2rem;
-}
-
-.skills-article:first-child {
-  height: 100%;
 }
 
 .skills-container {
   width: 48%;
+}
+
+.programming-skills {
+  width: 100%;
+}
+
+.column-list {
+  columns: 2;
+  width: 100%;
 }
 
 /*
@@ -679,6 +682,10 @@ Adaptation for slimmer window width on desktop or ipad*/
 
   .skills-container {
     width: 100%;
+  }
+
+  .column-list {
+    columns: 1;
   }
 
   .skills-article {
